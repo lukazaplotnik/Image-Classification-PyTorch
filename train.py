@@ -8,10 +8,10 @@ from torch import optim
 """ This Python script is part of the developed command line application. It is
 used to train a new convolutional neural network on a specified dataset and save
 the model as a checkpoint. The script has the following input arguments:
-- data_dir : input data directory
+- data_dir : input data directory (required argument)
 - save_dir : directory to save checkpoints
 - arch : convolutional neural network architecture
-- hidden_units : number of hidden_units in each layer of the net's fully
+- hidden_units : number of hidden units in each layer of the net's fully
 connected classifier
 - learning_rate : learning rate used in the Adam optimizer
 - epochs : number of training epochs
@@ -21,9 +21,9 @@ connected classifier
 parser = argparse.ArgumentParser()
 parser.add_argument('data_dir', action = 'store')
 parser.add_argument('--save_dir', action = 'store', dest = 'save_dir', default = 'checkpoint.pth')
-parser.add_argument('--arch', action = 'store', dest = 'arch', default='vgg11')
-parser.add_argument('--hidden_units', action = 'append', dest='hidden_units', type = int)
-parser.add_argument('--learning_rate', action = 'store', dest='learning_rate', default = 0.001, type = float)
+parser.add_argument('--arch', action = 'store', dest = 'arch', default = 'vgg11')
+parser.add_argument('--hidden_units', action = 'append', dest = 'hidden_units', type = int)
+parser.add_argument('--learning_rate', action = 'store', dest = 'learning_rate', default = 0.001, type = float)
 parser.add_argument('--epochs', action = 'store', dest='epochs', type = int, default = 7)
 parser.add_argument('--gpu', action="store_true", default=False)
 args = parser.parse_args()

@@ -10,8 +10,8 @@ import json
 loads a trained neural network and use it to predict the most likely
 class for an input image (or top k most probable classes). The script has the
 following input arguments:
-- input : path to input image to be classified
-- checkpoint : saved trained neural network
+- input : path to input image to be classified (required argument)
+- checkpoint : saved trained neural network (required argument)
 - top_k : number of most likely categories displayed
 - category_names : mapping of categories to category names
 - gpu : flag to run on GPU
