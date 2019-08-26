@@ -36,7 +36,7 @@ Usage example: `python train.py data_directory --save_dir save_directory --arch 
 Usage example: `python predict.py path/to/image checkpoint --top_k 5 --category_names cat_to_name.json --gpu`
 
 ### Results
-The default `vgg11` model with default parameters (see `train.py`) achieved a solid 91.34% accuracy on the flower classification testing set (102 categories).
+The default `vgg11` model with default parameters (see `train.py`) achieved a solid 91.34% accuracy on the flower classification testing set (102 categories). Rather than running a comprehensive analysis of model performance, or fine tuning the model for this specific task, we focused on developing a generic command line application that can be easily adapted to any other image recognition task.
 
 ### Acknowledgments
 We thank the Visual Geometry Group, Department of Engineering Science, University of Oxford for providing the dataset.
